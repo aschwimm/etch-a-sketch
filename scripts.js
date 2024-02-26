@@ -14,6 +14,7 @@ function drawGrid(gridRows = 16, gridColumns = 16) {
         container.appendChild(subContainer);
     }
     const allGridElements = document.querySelectorAll(".grid-element");
+    // Change the background color of a grid element once mouse moves through the individual grid element
     allGridElements.forEach((element) => {
         element.addEventListener("mouseenter", () => {
             element.classList.add("moused-over");
