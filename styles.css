@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.sub-container {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 auto;
+}
+.grid-element {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    color: white;
+    outline: 1px solid white;
+    
+}
