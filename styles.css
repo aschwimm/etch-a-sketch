@@ -31,6 +31,7 @@
 .grid-element:hover {
     background-color: black;
 }
+/*Class that's added by JS when a grid element is moused over, changing it's background color*/
 .moused-over {
     background-color: rgb(63, 62, 62);
 }
