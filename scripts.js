@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", drawGrid(16, 16));
+
 function drawGrid(gridRows, gridColumns) {
     const container = document.querySelector(".container");
     for(let i = 0; i < gridRows; i++) {
