@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", drawGrid(16, 16));
+document.addEventListener("DOMContentLoaded", drawGrid());
 
-function drawGrid(gridRows, gridColumns) {
+function drawGrid(gridRows = 16, gridColumns = 16) {
     const container = document.querySelector(".container");
     for(let i = 0; i < gridRows; i++) {
         const subContainer = document.createElement("div");
