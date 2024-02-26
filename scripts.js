@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", drawGrid());
 
 function drawGrid(gridRows = 16, gridColumns = 16) {
     const container = document.querySelector(".container");
+    container.replaceChildren();
     for(let i = 0; i < gridRows; i++) {
         const subContainer = document.createElement("div");
         subContainer.classList.add("sub-container")
@@ -12,4 +13,10 @@ function drawGrid(gridRows = 16, gridColumns = 16) {
         }
         container.appendChild(subContainer);
     }
+    const allGridElements = document.querySelectorAll(".grid-element");
+    allGridElements.forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+            element.classList.add("moused-over");
+        })
+    })
 }
