@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", drawGrid());
 
-const OPACITY_MODIFIER = 2;
-let initialOpacity = 0;
+const OPACITY_INCREMENTER = .1;
+
 
 function drawGrid(gridRows = 16, gridColumns = 16) {
     const container = document.querySelector(".container");
@@ -20,11 +20,11 @@ function drawGrid(gridRows = 16, gridColumns = 16) {
     // Change the opacity of a grid element once mouse moves through the individual grid element
     allGridElements.forEach(function(element) {
         element.addEventListener("mouseenter", function()  {
-            let a = this.style.opacity;
+            let elementOpacity = this.style.opacity;
             if(!this.style.opacity) {
-                this.style.opacity = .1;
+                this.style.opacity = OPACITY_INCREMENTER;
             } else {
-                this.style.opacity = parseFloat(a) + .1;
+                this.style.opacity = parseFloat(elementOpacity) + OPACITY_INCREMENTER;
             }
         })
     })
