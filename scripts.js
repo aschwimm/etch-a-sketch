@@ -26,6 +26,13 @@ function drawGrid(gridRows = 16, gridColumns = 16) {
             } else {
                 this.style.opacity = parseFloat(elementOpacity) + OPACITY_INCREMENTER;
             }
+            this.style.backgroundColor = rgbRandomizer();
         })
     })
+}
+
+// Returns a string template with randomized RGB values
+function rgbRandomizer() {
+    const randomRbg = () => Math.floor((Math.random() * 255) + 1)
+    return `rgb(${randomRbg()}, ${randomRbg()}, ${randomRbg()})`;
 }
