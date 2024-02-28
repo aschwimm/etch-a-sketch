@@ -1,8 +1,29 @@
 document.addEventListener("DOMContentLoaded", drawGrid());
 
 const OPACITY_INCREMENTER = .1;
+let isFormDisplayed = false;
 
-
+document.getElementById("grid-size-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let rows = document.getElementById("grid-rows").value;
+    let columns = document.getElementById("grid-columns").value;
+    if(rows > 100 || columns > 100){
+        alert("Please enter a grid size no larger than 100 x 100");
+    } else {
+        drawGrid(rows, columns);
+    }
+})
+document.getElementById("grid-dimensions-input").addEventListener("click", () => {
+    let gridSizeForm = document.getElementById("grid-size-form");
+    if (!isFormDisplayed) {
+        gridSizeForm.style.display = "block";
+        isFormDisplayed = true;
+    } 
+    else if (isFormDisplayed) {
+        gridSizeForm.style.display = "none";
+        isFormDisplayed = false;
+    }
+})
 function drawGrid(gridRows = 16, gridColumns = 16) {
     const container = document.querySelector(".container");
     container.replaceChildren();
@@ -36,3 +57,4 @@ function rgbRandomizer() {
     const randomRbg = () => Math.floor((Math.random() * 255) + 1)
     return `rgb(${randomRbg()}, ${randomRbg()}, ${randomRbg()})`;
 }
+
