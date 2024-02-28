@@ -27,7 +27,7 @@ function drawGrid(gridRows = 16, gridColumns = 16) {
                 this.style.opacity = parseFloat(elementOpacity) + OPACITY_INCREMENTER;
             }
             this.style.backgroundColor = rgbRandomizer();
-        })
+        })        
     })
 }
 
