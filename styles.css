@@ -12,8 +12,8 @@
     display: flex;
     flex-direction: column;
     margin: 20px;
-    height: 50vw;
-    width: 50vw;
+    height: 45vw;
+    width: 45vw;
     border: 5px solid red;
     
 }
