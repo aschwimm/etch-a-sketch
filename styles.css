@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    padding-bottom: 200px;
+}
 .wrapper {
     display: flex;
     justify-content: center;
@@ -12,9 +15,9 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    height: 45vw;
-    width: 45vw;
+    margin: 5px 0;
+    height: 36vw;
+    width: 36vw;
     border: 5px solid red;
     
 }
@@ -32,4 +35,45 @@
 }
 .grid-element:hover {
     background-color: black;
+}
+#grid-dimensions-input {
+    padding: 25px 30px;
+    margin: 15px 0;
+    color: red;
+    font-weight: bolder;
+    background-color: #faf8f8;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.form-wrapper {
+    margin: 0 0 5px 0;
+}
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    font-size: 25px;
+}
+h1 {
+    font-size: 50px;
+}
+#grid-dimensions-input:hover {
+    background-color: #ecebeb;
+}
+#grid-rows,
+#grid-columns,
+#draw-grid-button {
+    font-size: 25px;
+    background-color: #faf8f8;
+    padding: 5px 6px;
+    border-radius: 10px;
+    margin: 0 3px;
+}
+#draw-grid-button {
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid red;
 }
