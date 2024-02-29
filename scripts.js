@@ -9,6 +9,9 @@ document.getElementById("grid-size-form").addEventListener("submit", function(e)
     let columns = document.getElementById("grid-columns").value;
     if(rows > 100 || columns > 100){
         alert("Please enter a grid size no larger than 100 x 100");
+    }
+    else if(rows < 0 || columns < 0) {
+        alert("Please enter a positive number");
     } else {
         drawGrid(rows, columns);
     }
